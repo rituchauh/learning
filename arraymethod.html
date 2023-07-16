@@ -1,0 +1,66 @@
+<html>
+    <head>
+<script>
+var ary=["mancy",20,"male"]
+document.write(ary+"<br>");
+ary[1]=23;
+document.write(ary);
+delete ary[2];
+document.write("<br>")
+console.log(ary)
+
+// array method
+var a=["suresh","ramesh", "anaya", "meera"]
+var b=["he","she","i","we"]
+var a1=[12,22,33]
+a.sort();
+document.write(a);
+a.reverse();
+document.write("<br>");
+document.write(a);
+a.pop()
+document.write("<br>");
+document.write(a);
+a.push("kavyansh");
+document.write("<br>");
+document.write(a);
+// pop ka just opposite shift and push ka just opposite unshift
+a.shift();
+document.write("<br>");
+document.write(a);
+a.unshift("neeraj")
+document.write("<br>");
+document.write(a);
+// to concat 2 arrays
+ var c=a.concat("rahul","seeta");
+ document.write("<br>");
+document.write(c);
+
+var d=a.concat(b)
+document.write("<br>");
+document.write(d);
+var e=b.concat(a)
+document.write("<br>");
+document.write(e);
+var f=a.concat(b,a1);
+document.write("<br>");
+document.write(f);
+
+// to join 2 or more arrays to make a string
+var a=["neeraj","lucky", "ritu", "dolly"]
+var b=[12,13,14]
+
+var c=a.concat(b);
+document.write("<br>")
+document.write(c + "<br><br>")
+var d=c.join(" // ")
+document.write("<br>")
+document.write(d)
+
+
+</script>
+    </head>
+    <body>
+
+    </body>
+</html>

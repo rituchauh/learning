@@ -1,0 +1,138 @@
+<html>
+<head>
+    <!-- <style>
+        .suub {
+            background-color: red;
+            border: 5px blue;
+            width: 180px;
+
+
+        }
+    </style> -->
+<body>
+
+    <label>first value</label>
+    <input type="text"id="fv" name="first value">
+    <br>
+    <label>last value</label>
+    <input type="text" id="lv" name="last value">
+    <br>
+    <button onclick="ritu()">click me</button>
+    <div id="sub" class="suub"></div>
+    <br>
+
+
+    <label>first value</label>
+    <input type="text" id="ffv">
+    <br>
+    <label>last value</label>
+    <input type="text" id="llv">
+    <br>
+    <button onclick="devi()">click me</button>
+    <div id="div" class="suub"></div>
+    <br>
+
+
+    <label>first value</label>
+<input type="text" id="ff">
+<br>
+    <label>second value</label>
+<input type="text" id="ll">
+<br>
+    <label>third value</label>
+<input type="text" id="mm">
+<br>
+<button onclick="reetu()" id="mul">click me</button>
+<div id="mult" class="suub"></div>
+<br>
+<button onclick="clik()">click me</button>
+<div id="clicck"></div>
+ <ul id="family">
+    <li>neeraj</li>
+    <li>ritu</li>
+    <li>kavyansh</li>
+    <li>lucky</li>
+    <li>dolly</li>
+    <button onclick="forloop()">click me</button>
+ </ul>
+<script src="java.js">
+</script>
+
+<script>
+function ritu(){
+
+    var a=document.getElementById("fv").value;
+    var b=document.getElementById("lv").value;
+    var c=sub(a,b);
+    document.getElementById("sub").innerHTML=c;
+}
+function devi(){
+    var e=document.getElementById("ffv").value;
+    var f=document.getElementById("llv").value;
+    var h=div(e,f);
+    document.getElementById("div").innerHTML=h
+    document.getElementById("div").style.backgroundColor="green"
+}
+function reetu(){
+    var m=document.getElementById("ff").value;
+    var j=document.getElementById("ll").value;
+    var k=document.getElementById("mm").value;
+var l= mul(m,j,k)
+document.getElementById("mult").innerHTML=l
+document.getElementsByClassName("suub").style.backgroundColor="brown"
+}
+// onclick event at any function
+
+function clik(){
+    var a="hello ritu"
+    document.getElementById("clicck").innerHTML=a
+    // document.write("hello everybody")
+}
+
+//while loop
+document.write("<br>")
+var a=1;
+while(a<=10){
+    // document.write("today thoughts<br>");
+    //or  to do numbering in loop item
+    // document.write(a+ "."+ "today thought<br>")
+    //or  to do listing in loop item
+    document.write("<li>" + "hello everybody" + "</li>")
+    a=a+1;
+}
+
+var a=1;
+do{
+    document.write(a + "-hiii" + "<br>");
+    a++
+}while (a<=10)
+
+// for loop
+for(var a=1; a<=10; a++){
+    document.write(a + "- yeh this is me  <br>")
+}
+
+// break and continue satement in for loop
+for (var a=10;a>=1;a--){
+    if(a==4){
+        document.write("memem<br>")
+        continue
+    }
+    document.write(a + " - kavyansh <br>")
+}
+function forloop(){
+    document.getElementById("family").value
+}
+for (var a=1; a<=5;a++){
+    document.write(a + "<br")
+}
+
+// modify and delete array element
+var a=["sunny",18,"male"];
+a[1] = 20;
+document.write(a)
+</script>
+</body>
+
+</head>
+</html>

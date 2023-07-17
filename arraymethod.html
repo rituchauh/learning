@@ -1,66 +1,48 @@
 <html>
     <head>
 <script>
-var ary=["mancy",20,"male"]
-document.write(ary+"<br>");
-ary[1]=23;
-document.write(ary);
-delete ary[2];
+// var a=[12,13,15,19,20,22,2];
+// var b=a.some(check)
+// document.write(b)
+// function check(greater){
+// return greater >=50}
+// document.write("<br>")
+// var r=[12,22,33,44,55,6,7,79];
+// var s=r.every(chek);
+// document.write(s);
+// function chek(me){
+//     return me>=0
+// }
+
+// var deg = ["MA","BA","BSc","BCom"];
+// var age =[20,25,30,26,37,89]
+// document.write(deg + "<br>")
+// var a=age.find(checkDeg)
+// document.write(a);
+// function checkDeg(d){
+//     return d>=40
+// }
+// var a=[1213,14,22,24,25,67,45];
+// var b=a.filter(checkA)
+// document.write(b)
+// function checkA(great){
+//     return great<=40
+// }
+var a=["ram","sia","mia", "hia"]
+var b=a.toString(a);
+document.write(b)
 document.write("<br>")
-console.log(ary)
+console.log(typeof b)
 
-// array method
-var a=["suresh","ramesh", "anaya", "meera"]
-var b=["he","she","i","we"]
-var a1=[12,22,33]
-a.sort();
-document.write(a);
-a.reverse();
-document.write("<br>");
-document.write(a);
-a.pop()
-document.write("<br>");
-document.write(a);
-a.push("kavyansh");
-document.write("<br>");
-document.write(a);
-// pop ka just opposite shift and push ka just opposite unshift
-a.shift();
-document.write("<br>");
-document.write(a);
-a.unshift("neeraj")
-document.write("<br>");
-document.write(a);
-// to concat 2 arrays
- var c=a.concat("rahul","seeta");
- document.write("<br>");
-document.write(c);
+var m=["ram","seeta","geeta"]
 
-var d=a.concat(b)
-document.write("<br>");
-document.write(d);
-var e=b.concat(a)
-document.write("<br>");
-document.write(e);
-var f=a.concat(b,a1);
-document.write("<br>");
-document.write(f);
+m.forEach(function(value, index){
+    document.write(index + ":" + value +"<br>")
+}
 
-// to join 2 or more arrays to make a string
-var a=["neeraj","lucky", "ritu", "dolly"]
-var b=[12,13,14]
-
-var c=a.concat(b);
-document.write("<br>")
-document.write(c + "<br><br>")
-var d=c.join(" // ")
-document.write("<br>")
-document.write(d)
-
-
+)
 </script>
-    </head>
     <body>
 
     </body>
-</html>
+</html

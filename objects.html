@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <script>
+
+var a={
+    firstName : "rahul",
+    lastName : "kumar",
+    age : 20,
+    deg : "Bed",
+    movies : ["dhoom", "ram"],
+    salary : function(){
+        return 25000;
+    },
+    fullname : function(){
+        return this.firstName +" " + this.lastName
+    },
+    living : {
+        city :"Delhi",
+        country : "India"
+    }
+}
+document.write(a.firstName + "<br>");
+document.write(a.age + "<br>")
+document.write(a.movies[0] + "<br>")
+document.write(a.fullname() + "<br>")
+document.write(a.living.city + "<br>")
+console.log(a.living)
+
+    </script>
+    </head>
+    <body>
+    </body>
+    </html>

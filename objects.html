@@ -26,6 +26,73 @@ document.write(a.fullname() + "<br>")
 document.write(a.living.city + "<br>")
 console.log(a.living)
 
+// new method to make objects
+var a = new Object();
+a.company = "onida",
+a.fullName = "onida techno"
+console.log(a)
+
+document.write("<br>")
+
+// array of objects
+var student = [
+    {nam: "ritu", age: 35, deg:"bed"},
+    {nam: "geetu", age: 35, deg:"med"},
+    {nam: "riau", age: 35, deg:"phd"},
+    {nam: "meetu", age: 35,deg:"bed"}
+];
+console.log(student)
+for (var i=0; i<student.length; i++){
+document.write(student[i].nam+ " : " + student[i].age +" "+student[i].deg + "<br>")
+}
+
+// const variable with array and objects
+const k=[10,20,40];
+k[0] = 13;
+console.log(k);
+
+const m={
+    name :"rahul",
+    age : 29,
+    deg : "mba"
+}
+m.name ="meetu"
+console.log(m)
+
+// how to print values of objects
+var n={
+    firstName : "Ritu",
+    lastName : "Devi"
+}
+for (var key in n){
+    document.write(key + " : " + n[key] + "<br>")
+}
+
+// may metod in array (same as for and for/each loop)
+// map- existing array me kuch calculatin karke new arry dena
+
+var ary=[10,20,30,40,50,60]
+
+var b=ary.map(multiply);
+function multiply(x){
+    return x*30
+}
+document.write(b)
+document.write("<br>")
+
+var arry =[
+    {fname:"ritu", age:20},
+    {fname:"mitu", age:20},
+    {fname:"gitu", age:20}
+];
+var z=arry.map(test);
+function test(y){
+    return y.fname +" " + y.age + " " +"<br>"
+}
+document.write(z)
+
+
+
     </script>
     </head>
     <body>

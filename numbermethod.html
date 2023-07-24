@@ -29,9 +29,20 @@ document.write("is integer or not" +"<br>")
 var str6=134;
 var num6=Number.isInteger(str6);
 document.write(num6+"<br>")
-var str7=100;
+var str7="hello";
 var num7=Number.isInteger(str7);
 document.write(num7+"<br>")
+
+
+
+var str7=5.567;
+var num7=str7.toFixed(0);
+document.write(num7);
+document.write("<br>");
+
+var str8=24.5634;
+var num8=str8.toPrecision(3);
+document.write(num8);
 
 
 

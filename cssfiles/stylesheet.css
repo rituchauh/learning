@@ -1,0 +1,8 @@
+#mainPage{
+    display: flex;
+}
+p1{
+    font-size: large;
+    color: blue;
+    text-transform: uppercase;
+}

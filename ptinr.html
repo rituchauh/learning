@@ -1,26 +1,46 @@
 <html>
-    <head>
-        <title>PT INR test report</title>
-        <link rel="stylesheet" href="cssfiles/stylesheet.css">
-        <script src = "ptinr.js">
 
-        </script>
-    </head>
-    <body>
-        <div id="mainPage">
-            <p1>PT INR Report</p1><br><br>
-                    <label id="label">date</label>
-        <input type="Date" id="date"/><br><br>
-        <label id="label">acitrom tablet (mg)</label>
-<input type="text" id="acitromQty"/><br><br>
-<label id="label">PT INR value</label>
-<input type="text" id="ptinrValue"/><br><br>
-<label id="label">Lab Name</label>
-<input type="text" id="labName"/><br><br>
-<button id="button" onclick="getvalue()">Submit</button>
-<p id="error"></p>
-</div>
+<head>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+   <title>PT INR test report</title>
+   <link rel="stylesheet" href="cssfiles/stylesheet.css">
+   <script src="ptinr.js"></script>
+</head>
 
+<body>
+   <div id="mainPage">
+      <div class="document">
+         <div>
+            <h1>PT INR Report</h1>
+         </div>
+         <div class="inputField">
+            <div>
+               <label id="label">Date</label>
+            </div>
+            <input type="date" id="date" class="inputClass">
+         </div>
+         <div class="inputField">
+            <label id="label">Acitrom tablet (mg)</label>
+            <input type="text" id="acitromQty" class="inputClass">
+         </div>
+         <div class="inputField">
+            <label id="label">PT INR value</label>
+            <input type="text" id="ptinrValue" class="inputClass">
+         </div>
+         <div class="inputField">
+            <label id="label">Lab Name</label>
+            <input type="text" id="labName" class="inputClass">
+         </div>
+      </div>
+   </div>
+   <div class="submit">
 
-    </body>
-    </html>
+      <button id="button" class="submitclass" onclick="getvalue()">Submit</button>
+<input type="button" value="reset" onclick="resetData()">
+
+      <p id="error"></p>
+   </div>
+
+</body>
+
+</html>

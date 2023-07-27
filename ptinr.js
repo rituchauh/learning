@@ -1,17 +1,7 @@
 
-// let form=document.forms[myform]
-// form.addEventListener("submit", getValues)
-// function getValues(event){
-//     event.preventDefault();
-// }
-// let data ={
-//     date : this.date.value,
-//     acitrom : this.acitrom.value,
-//     ptinr : this.ptinr.value
-// }
 
 
-function getvalue() {
+async function getvalue() {
    var date = document.getElementById("date").value;
    var acitrom = document.getElementById("acitromQty").value;
    var ptinr = document.getElementById("ptinrValue").value;
@@ -43,22 +33,15 @@ function getvalue() {
       else {
          formValid = true
       }
-      //   if (r==/^[A-Za-z]+$/){
-      //    validLabName="plz enter a valid labname"
-      //    document.getElementById("error").innerHTML=validLabName
-      //    formValid =true
-      //    return true
-      //   }
-      //   else{
-      //    formValid =false
-      //   }
+
       var lab = /^[A-Za-z]+$/;
       if (r.match(lab)) {
-         formValid=true;
+         formValid = true;
       }
       else {
-         alert("Please enter letters only.");
-         formValid= false;
+         validLabName="Please enter letters only.";
+         document.getElementById("error").innerHTML=validLabName
+formValid = false;
          return false
       }
 
@@ -74,17 +57,32 @@ function getvalue() {
    }
    if (formValid) {
       let data = {
-         dateOfTest: date,
-         acitromQty: acitrom,
-         ptinrValue: ptinr,
-         labName: whichLab
+         "test_date": date,
+         "ptinr_value": ptinr,
+         "medicine_dose": acitrom,
+         "lab_name": whichLab
       }
       console.log(data)
+      await ptInrApi(data);
+
+
+
 
    }
 
-
-
-
-
 }
+function resetData(){
+   document.getElementsByClassName("inputClass")[0].innerHTML="";
+   // document.getElementById("date").value="";
+   // document.getElementById("acitromQty").value="";
+   // document.getElementById("ptinrValue").value="";
+   // document.getElementById("labName").value="";
+}
+async function ptInrApi(data) {
+   await axios.post("http://192.168.1.7:3002/api/dummyapi/save-ptnir-test-data", JSON.stringify(data)).then(function (response) {
+      console.log(response)
+      // do whatever you want if console is [object object] then stringify the response
+   })
+}
+
+

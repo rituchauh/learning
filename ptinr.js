@@ -72,7 +72,7 @@ formValid = false;
 
 }
 function resetData(){
-   document.getElementsByClassName("inputClass")[0].innerHTML="";
+   // document.getElementsByClassName("inputClass")[0].innerHTML="";
    // document.getElementById("date").value="";
    // document.getElementById("acitromQty").value="";
    // document.getElementById("ptinrValue").value="";

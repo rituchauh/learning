@@ -1,8 +1,49 @@
-#mainPage{
+#mainPage {
     display: flex;
+    justify-content: center;
 }
-p1{
-    font-size: large;
+
+h1 {
+    font-size: 30px;
     color: blue;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.inputField {
+    margin: 15px;
+    padding: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.document {
+    background-color: darkgrey;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit button {
+    width: 92px;
+    font-size: large;
+    font-weight: bold;
+}
+.submitclass:hover{
+    background-color: darkgray;
+}
+#error{
+    color: red;
+    margin-left: 10px;
 }

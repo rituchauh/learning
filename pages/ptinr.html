@@ -3,8 +3,8 @@
 <head>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
    <title>PT INR test report</title>
-   <link rel="stylesheet" href="cssfiles/stylesheet.css">
-   <script src="ptinr.js"></script>
+   <link rel="stylesheet" href="../cssfiles/stylesheet.css">
+   <script src="../js/ptinr.js"></script>
 </head>
 
 <body>
@@ -34,12 +34,15 @@
       </div>
    </div>
    <div class="submit">
+      <div id="event" class="event">
 
-      <button id="button" class="submitclass" onclick="getvalue()">Submit</button>
-<input type="button" value="reset" onclick="resetData()">
+      <button class="submitclass" onclick="getvalue()">Submit</button>
+<button class="submitclass" onclick="resetData()">Reset</button>
+</div>
 
       <p id="error"></p>
    </div>
+
 
 </body>
 

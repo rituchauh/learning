@@ -25,6 +25,7 @@ h1 {
 
 .document {
     background-color: darkgrey;
+    border-radius: 20px;
 }
 
 .submit {
@@ -40,6 +41,10 @@ h1 {
     font-size: large;
     font-weight: bold;
 }
+.submitClass{
+    margin-left: 25px;
+}
+
 .submitclass:hover{
     background-color: darkgray;
 }
@@ -47,3 +52,8 @@ h1 {
     color: red;
     margin-left: 10px;
 }
+table, tr, td{
+    border: 2px solid;
+
+}
+

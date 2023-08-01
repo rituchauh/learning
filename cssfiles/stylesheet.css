@@ -71,7 +71,7 @@ td {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
     gap: 25px 25px;
 }
 
@@ -92,4 +92,8 @@ td {
     display: flex;
     justify-content: right;
     margin-top: 30px;
+}
+.pointer{
+    cursor: pointer;
+    text-decoration: underline;
 }

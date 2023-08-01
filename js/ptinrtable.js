@@ -9,7 +9,7 @@ window.onload = (event) => {
 console.log(sortId)
 let tableList="<table id='tableAll'><thead><tr><th>id</th><th>test_date</th><th>test_time</th><th>ptinr_value</th><th>medicine_dose</th><th>lab_name</th><th>action</th></tr></thead><tbody>"
 for( var i=0;i<sortId.length;i++){
-  tableList=tableList+"<tr><td>"+sortId[i].id+"</td><td>"+sortId[i].test_date+"</td><td>"+sortId[i].test_time+"</td><td>"+sortId[i].ptinr_value+"</td><td>"+sortId[i].medicine_dose+"</td><td>"+sortId[i].lab_name+"</td><td onclick='editId("+res.data[i].id+")'>edit</td>"+"</tr>"
+  tableList=tableList+"<tr><td>"+sortId[i].id+"</td><td>"+sortId[i].test_date+"</td><td>"+sortId[i].test_time+"</td><td>"+sortId[i].ptinr_value+"</td><td>"+sortId[i].medicine_dose+"</td><td>"+sortId[i].lab_name+"</td><td onclick='editId("+res.data[i].id+")'><a href='file:///home/nero/Desktop/ritujuly/pages/ptinr.html'>edit</a></td>"+"</tr>"
 }
 
 tableList = tableList +"</tbody></table>"
@@ -23,7 +23,11 @@ document.getElementById("ptInrList").innerHTML=tableList
 
 
   function editId(id){
-    alert(id)
+      // Set Item
+localStorage.setItem("updateId", id);
+// Retrieve
+console.log(localStorage.getItem("updateId"));
+
   }
 
 

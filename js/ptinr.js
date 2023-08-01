@@ -1,4 +1,11 @@
+window.onload = (event) => {
+  var particularId = localStorage.getItem("updateId");
+//   console.log(particularId);
+if(particularId){
 
+ setvalueforupdate(particularId);
+}
+ };
 
 
 async function getvalue() {
@@ -105,6 +112,38 @@ async function ptInrApi(data) {
    }
    )
 
+
 }
 
+
+async function setvalueforupdate(idvalue){
+   const res = await axios.get(`http://192.168.1.7:4000/ptinrs/`+ idvalue);
+
+console.log(res)
+   // var particularIdData={
+   //    "status": 1,
+   // "data": {
+   // "id": 2,
+   // "test_date": "24-08-2022",
+   // "test_time": "12:30PM",
+   // "ptinr_value": 2,
+   // "medicine_dose": "3MG",
+   // "lab_name": "1MG"
+   // },
+   // "message": "Data found successfully"
+   // }
+   // let dateFormatChange=res.data.data.test_date
+   // let myArray=dateFormatChange.split("-")
+   // let newDate=myArray[0]
+   // let month=myArray[1]
+   // let year=myArray[2]
+   // let modifyDate=year+"-"+month+"-"+newDate
+   // console.log(modifyDate)
+   document.getElementById("date").value=res.data.data.test_date;
+   console.log(res.data.data.test_date)
+   document.getElementById("labName").value=res.data.data.lab_name;
+   document.getElementById("ptinrValue").value=res.data.data.ptinr_value;
+   document.getElementById("acitromQty").value=res.data.data.medicine_dose;
+
+}
 
